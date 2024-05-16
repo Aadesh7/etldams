@@ -1,0 +1,27 @@
+import scrapy
+
+class TotalSpider(scrapy.Spider):
+    name = 'totalspider'
+    start_urls = ['https://cheers.com.np/']
+
+    def parse(self, response):
+        category_links = response.css('li.active div.sub-menu-cateogry > ul > li > a.container-link::attr(href)').getall()
+        
+        for category_link in category_links:
+            yield scrapy.Request(url=response.urljoin(category_link), callback=self.parse_category, meta={'category': category_link.split('=')[1]})
+    
+    def parse_category(self, response):
+
+        category_name = response.meta['category']
+
+        for products in response.css('div.text-center.product-list'):
+            name = products.css('a > h5::text').get()
+            url = response.urljoin(products.css('a::attr(href)').get())
+            price = products.css('h4::text').get()
+            cleaned_price = price[4:]
+            yield {
+                'category': category_name,
+                'name': name,
+                'link': url,
+                'price': cleaned_price
+            }
