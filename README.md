@@ -20,7 +20,7 @@
         </li>
     </ul><br>
     <h2>Description of ETL pipeline:</h2><br>
-    <p>The following link presents the basic ETL pipeline (in excalidraw): <a href="https://excalidraw.com/#json=W1BDrcGnY675G5-t6qDrg,W7ByJ76XOcuBUNXUAnFAKw">figure</a></p><br>
+    <p>The code base contains a scrapy project, with totalspider.py, the main crawler for cheers, and the pipelines.py, where the transformation and loading is performed. Also, the code base contains getproducts.py which calls the API for salesberry and performs extraction, transform and load. Finally, we have run.py which creates subprocess to orchestrate the entire pipeline. The following link presents the basic ETL pipeline (in excalidraw): <a href="https://excalidraw.com/#json=W1BDrcGnY675G5-t6qDrg,W7ByJ76XOcuBUNXUAnFAKw">figure</a></p><br>
     <img width="600" src="./diagram.JPG" alt="comparison" /><br>
     <h2>Extraction:</h2><br>
     <p>
