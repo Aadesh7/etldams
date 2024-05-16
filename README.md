@@ -89,7 +89,7 @@
     </pre><br>
     <h2>Reporting:</h2><br>
     <p>For any ETL project, there must be a final goal in mind, for example, ML, analytics or reporting. Here, I have compared the same products from two different sources and compared the prices. Power BI was used to create the graphical representation.</p><br>
-    <img width="30px" src="./comparison.JPG" alt="comparison" /><br>
+    <img width="350" src="./comparison.JPG" alt="comparison" /><br>
     <h2>How to Run Locally:</h2>
     <ol>
         <li>In your preferred directory, create a virtual environment for Python.</li>
