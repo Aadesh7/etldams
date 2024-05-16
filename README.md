@@ -21,7 +21,7 @@
     </ul><br>
     <h2>Description of ETL pipeline:</h2><br>
     <p>The following link presents the basic ETL pipeline (in excalidraw): <a href="https://excalidraw.com/#json=W1BDrcGnY675G5-t6qDrg,W7ByJ76XOcuBUNXUAnFAKw">figure</a></p><br>
-    ![Figure](https://github.com/Aadesh7/etldams/blob/main/diagram.JPG)
+    ![Figure](diagram.JPG)
     <h2>Extraction:</h2><br>
     <p>
     As shown in the figure, the liquor data is extracted from two sources. The project is an extension of previous assignment where I scraped all liquor products from cheers website. For another data source, I called salesberry store API to gather all liquor products from their website as well. The commands in run.py file were run in order specified below:</P><br>
